@@ -42,9 +42,7 @@ km.fit(X)
 print("done in %0.3fs" % (time() - t0))
 print("Homogeneity: %0.3f" % metrics.homogeneity_score(labels, km.labels_))
 print("Completeness: %0.3f" % metrics.completeness_score(labels, km.labels_))
-print("V-measure: %0.3f" % metrics.v_measure_score(labels, km.labels_))
-print("Adjusted Rand-Index: %.3f"% metrics.adjusted_rand_score(labels, km.labels_))
-print("Silhouette Coefficient: %0.3f"% metrics.silhouette_score(X, km.labels_, sample_size=1000))
+print("NMI: %0.3f" % metrics.normalized_mutual_info_score(labels, km.labels_))
 
 print()
 
