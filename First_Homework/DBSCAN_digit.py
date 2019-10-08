@@ -16,7 +16,7 @@ X = scale(digits.data)
 labels_true = digits.target
 # #############################################################################
 # Compute DBSCAN
-db = DBSCAN(eps=5, min_samples=15).fit(X)
+db = DBSCAN(eps=4, min_samples=5).fit(X)
 core_samples_mask = np.zeros_like(db.labels_, dtype=bool)
 core_samples_mask[db.core_sample_indices_] = True
 labels = db.labels_
