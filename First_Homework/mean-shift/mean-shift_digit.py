@@ -19,9 +19,9 @@ labels = ms.labels_
 cluster_centers = ms.cluster_centers_
 labels_unique = np.unique(labels)
 n_clusters_ = len(labels_unique)
-print('name\t\t\t\ttime\thomo\tcompl\tNMI')
-print('%-15s\t%.2fs\t%.3f\t%.3f\t%.3f'
-          % ('AffinityPropagation', (time() - t0),
+print('name\t\ttime\thomo\tcompl\tNMI')
+print('%-10s\t%.2fs\t%.3f\t%.3f\t%.3f'
+          % ('MeanShift', (time() - t0),
              metrics.homogeneity_score(labels_true, labels),
              metrics.completeness_score(labels_true, labels),
              metrics.normalized_mutual_info_score(labels_true, labels,average_method='arithmetic')))
